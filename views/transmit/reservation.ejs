@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="header_title_main">通知配信プラットフォームV2</div>    
+    <ul class="header_list">
+      <li class="header_btn first"><a href="<%= link.href %>"><%= link.text%></a></li>
+      <li class="header_btn"><a href="<%= link_application.href %>"><%= link_application.text%></a></li>
+    </ul>
+
+    <ul class="left_nav">
+      <li><a href="<%= link_transmit.href %>"><%= link_transmit.text%></a></li>
+      <li><a href="<%= link_transmit_done.href %>"><%= link_transmit_done.text%></a></li>
+      <li><a href="<%= link_transmit_web.href %>"><%= link_transmit_web.text%></a></li>
+      <li><a href="https://redash.io/" target="blank">レポート</a></li>
+      <li><a href="<%= link_transmit_db.href %>"><%= link_transmit_db.text%></a></li>
+    </ul>
+
+    <ul class="new_reservation">
+      <form method="post" action="/transmit/reservation">
+      <input type="hidden" name="id" value="<%= mydata.id %>">
+        <li>プラットフォーム</li>
+          <input type="checkbox">PC</br>
+          <input type="checkbox">SP</br></br>
+
+        <li>配信日時</li>
+          <input type="datetime-local" name="date" value="<%= mydata.date %>" style="width: 200px; height: 30px;"></br></br>
+
+        <li>配信タイトル・本文</li>
+          <input type="text" placeholder="タイトルを入力してください" name="title" value="<%= mydata.title %>" style="width: 200px; height: 30px;"></br></br>
+          <input type="text" placeholder="本文を入力してください" name="text" value="<%= mydata.text %>" style="width: 800px; height: 30px;"></br></br>
+
+        <li>ディープリンク</li>
+        <small>特定のコンテンツへ直接遷移させたい場合にディープリンクを指定します</small></br>
+        <small>PCとSPのURLをそれぞれ指定してください。</small></br></br>
+          <input type="text" placeholder="PC用のURL" name="deeplink_pc" value="<%= mydata.deeplink_pc %>" style="width: 800px; height: 30px;"></br></br>
+          <input type="text" placeholder="SP用のURL" name="deeplink_sp" value="<%= mydata.deeplink_sp %>" style="width: 800px; height: 30px;"></br></br>
+
+        <li>TTL指定</li>
+        <small>サーバー保存期間（秒）を1〜2592000で指定してください</small></br></br>
+          <input type="number" name="ttl" value="<%= mydata.ttl %>" style="width: 200px; height: 30px;"></br></br>
+
+        <input type="submit" value="更新"></br>
+         <a href="<%= link_transmit_back.href %>"><%= link_transmit_back.text%></a>
+      </form>
+    </ul>
+
+    <div class="main_title"><%= title %></div>
+    <div class="app_label"></div>
+    <div class="appChange_btn"><a href="<%= link_application.href %>"><%= link_application.text%></a></div>
+
+  </body>
+</html>

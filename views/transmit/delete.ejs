@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="header_title_main">通知配信プラットフォームV2</div>    
+    <ul class="header_list">
+      <li class="header_btn first"><a href="<%= link.href %>"><%= link.text%></a></li>
+      <li class="header_btn"><a href="<%= link_application.href %>"><%= link_application.text%></a></li>
+    </ul>
+
+    <ul class="left_nav">
+      <li><a href="<%= link_transmit.href %>"><%= link_transmit.text%></a></li>
+      <li><a href="<%= link_transmit_done.href %>"><%= link_transmit_done.text%></a></li>
+      <li><a href="<%= link_transmit_web.href %>"><%= link_transmit_web.text%></a></li>
+      <li><a href="https://redash.io/" target="blank">レポート</a></li>
+      <li><a href="<%= link_transmit_db.href %>"><%= link_transmit_db.text%></a></li>
+    </ul>
+
+    <ul class="new_reservation">
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th class="th">id</th>
+                    <th class="th">配信日時</th>
+                    <th class="th">タイトル</th>
+                    <th class="th">本文</th>
+                    <th class="th">ディープリンク(PC)</th>
+                    <th class="th">ディープリンク(SP)</th>
+                    <th class="th">TTL</th>
+                </tr>
+                </thead>
+
+                <tr>
+                    <th class="id"><%= mydata.id %></th>
+                    <td class="db"><%= mydata.date %></td>
+                    <td class="db"><%= mydata.title %></td>
+                    <td class="db"><%= mydata.text %></td>
+                    <td class="db"><%= mydata.deeplink_pc %></td>
+                    <td class="db"><%= mydata.deeplink_sp %></td>
+                    <td class="db"><%= mydata.ttl %></td>
+                </tr>
+            </table>
+
+            <form method="post" action="/transmit/delete">
+                <input type="hidden" name="id" value="<%= mydata.id %>">
+                <p><input type="submit" value="削除"></p>
+            </form>
+            <a href="<%= link_transmit_back.href %>"><%= link_transmit_back.text%></a>
+    </ul>
+
+    <div class="main_title"><%= title %></div>
+    <div class="app_label"></div>
+    <div class="appChange_btn"><a href="<%= link_application.href %>"><%= link_application.text%></a></div>
+
+  </body>
+</html>

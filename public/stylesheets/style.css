@@ -1,0 +1,297 @@
+body {
+  margin: auto;
+  padding: auto;
+  background-color: #e7e7e7;
+  position: relative;
+}
+
+a {
+  color: blue;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+ul {
+  list-style:none;
+}
+
+.header_title {
+  width: auto;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 2.3em;
+  background-color: #fff;
+  box-shadow: rgb(170, 170, 170) 0px 1px 4px;
+  color: #626262;
+  font-size: 16px;
+}
+
+.login_wrap {
+  width: 170px;
+  height: 300px;
+  margin: 50px auto;
+}
+
+.login_btn {
+  width: 170px;
+  height: 35px;
+  margin-top: 10px;
+  background-color: #00cccc;
+  color: #fff;
+  cursor: pointer;
+}
+
+.login_btn:hover {
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+/*-- application/index.ejs --*/
+
+.header_list {
+  position: absolute;
+  top: -7px;
+  right: 45px;
+}
+
+.header_btn {
+  width: 130px;
+  height: 30px;
+  line-height: 30px;
+  background-color: #999999;
+  text-align: center;
+  border-radius: 2px;
+  box-shadow: rgb(170, 170, 170) 0px 1px 4px;
+  float: left;
+}
+
+.header_btn:hover {
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.first {
+  margin-right: 20px;
+}
+
+.header_btn > a {
+  color: #fff;
+  display: block;
+  font-size: 12px;
+}
+
+.section_box {
+  position: relative;
+  width: 750px;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: rgb(170, 170, 170) 0px 1px 4px;   
+  margin: 25px auto;
+}
+
+.select_btn {
+  position: absolute;
+  bottom: 12px;
+  left: 15px;
+  width: 160px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: deeppink;
+  border-radius: 2px;
+  box-shadow: rgb(170, 170, 170) 0px 1px 4px;   
+}
+
+.select_btn > a {
+  color: #fff;
+  display: block;
+}
+
+.select_btn:hover {
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.edit_btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 2px;
+}
+
+.edit_btn > a {
+  color: #626262;
+  display: block;
+}
+
+.edit_btn:hover {
+  background-color: #e5e5e5;
+  transition: 0.5s;
+}
+
+/*-- application/edit.ejs --*/
+
+.item_edit {
+  width: 90%;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: rgb(170, 170, 170) 0px 1px 4px;   
+  margin: 0 auto;
+}
+
+/*-- transmit/index.ejs --*/
+
+.app_label {
+  position: fixed;
+  top: 20px;
+  left: 15px;
+  width: 220px;
+  height: 150px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: rgb(170, 170, 170) 0px 1px 4px;   
+}
+
+.appChange_btn {
+  position: fixed;
+  top: 195px;
+  left: 15px;
+  width: 220px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: rgb(170, 170, 170) 0px 1px 4px;
+  text-align: center;
+}
+
+.appChange_btn a {
+  display: block;
+  font-size: 14px;
+  color: #626262;
+}
+
+.appChange_btn:hover {
+  background-color: #e0e0e0;
+  transition: 0.5s;
+}
+
+.main_title {
+  position: absolute;
+  top: 80px;
+  left: 300px;
+  font-weight: bold;
+  font-size: 30px;
+  color: #626262;
+}
+
+.header_title_main {
+  width: auto;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 1.5em;
+  background-color: #fff;
+  box-shadow: rgb(170, 170, 170) 0px 1px 4px;
+  padding-left: 300px;
+  color: #626262;
+  font-size: 16px;
+}
+
+.left_nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 500px;
+  background-color: #fff;
+  box-shadow: rgb(170, 170, 170) 0px 1px 4px;
+  padding-top: 260px;
+  padding-left: 0;
+  margin: 0;
+}
+
+.left_nav li {
+  padding: 20px 15px;
+}
+
+.left_nav li a {
+  color: #626262;
+  display: block;
+}
+
+.left_nav li:hover {
+  background-color: #e5e5e5;
+  transition: 0.5s;
+}
+
+.transmit_contents {
+  position: absolute;
+  top: 135px;
+  left: 300px;
+  width: 965px;
+  height: 1000px;
+  background-color:#fff;
+  border-radius: 2px;
+  box-shadow: rgb(170, 170, 170) 0px 1px 4px;
+}
+
+/*-- transmit/web.ejs --*/
+
+.new_reservation {
+  position: absolute;
+  top: 135px;
+  left: 300px;
+  width: 935px;
+  height: 700px;
+  background-color:#fff;
+  border-radius: 2px;
+  box-shadow: rgb(170, 170, 170) 0px 1px 4px;
+  padding: 35px;
+}
+
+.new_reservation li {
+  font-weight: bold;
+  color: deeppink;
+  font-size: 17px; 
+}
+
+/*-- transmit/db.ejs --*/
+
+.body {
+  padding: 30px 60px;
+}
+
+.table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.th {
+  background-color: #00bcd4;
+  color: #fff;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.id {
+  background-color: #fff;
+  box-shadow: 0 9.5px 5px -10px #a0a0a0 inset;
+  padding: 10px;
+  font-size: 11px;
+}
+
+.db {
+  background-color: #fff;
+  box-shadow: 0 9.5px 5px -10px #a0a0a0 inset;
+  padding: 10px 30px;
+  font-size: 11px;
+}
+
+.back {
+  margin-top: 30px;
+}

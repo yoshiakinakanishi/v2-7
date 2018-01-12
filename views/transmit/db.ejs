@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+
+    <body class="body">
+        <head>
+            <h1 style="color: #626262;"><%= title %></h1>
+        </head>
+
+        <div role="main">
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th class="th">id</th>
+                    <th class="th">配信日時</th>
+                    <th class="th">タイトル</th>
+                    <th class="th">本文</th>
+                    <th class="th">ディープリンク(PC)</th>
+                    <th class="th">ディープリンク(SP)</th>
+                    <th class="th">TTL</th>
+                    <th class="th">編集</th>
+                    <th class="th">削除</th>
+                </tr>
+                </thead>
+
+                <% for(var i in content) { %>
+                <tr>
+                    <% var obj = content[i]; %>
+                    <% var num = obj.id %>
+                    <th class="id"><%= obj.id %></th>
+                    <td class="db"><%= obj.date %></td>
+                    <td class="db"><%= obj.title %></td>
+                    <td class="db"><%= obj.text %></td>
+                    <td class="db"><%= obj.deeplink_pc %></td>
+                    <td class="db"><%= obj.deeplink_sp %></td>
+                    <td class="db"><%= obj.ttl %></td>
+                    <td class="db"><a href="/transmit/reservation/?id=<%= num %>">編集</a></td>
+                    <td class="db"><a href="/transmit/delete/?id=<%= num %>">削除</a></td>
+                </tr>
+                <% } %>
+            </table>
+            
+        </div>
+
+      <div class="back">
+          <a href="<%= link_transmit_back.href %>"><%= link_transmit_back.text%></a>
+      </div>
+
+    </body>
+</html>
